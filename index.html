@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIR QUALITY CHECK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+    
+        .container {
+            text-align: center;
+        }
+    
+        h1 {
+            color: #333;
+        }
+    
+        .input-group {
+            margin-bottom: 20px;
+        }
+    
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+    
+        .input-group input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    
+        .info {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+        }
+    
+        .info-title {
+            color: #333;
+            margin-bottom: 10px;
+        }
+    
+        .info-data {
+            color: #666;
+            margin-bottom: 5px;
+        }
+    
+        #result {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>AIR QUALITY CHECK</h1>
+        <form id="airQualityForm">
+            <div class="input-group">
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" name="latitude" required>
+            </div>
+            <div class="input-group">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" name="longitude" required>
+            </div>
+            <button type="submit" class="btn-submit" id="submit">Submit</button>
+        </form>
+        <div class="info" id="result">
+            <h1 class="info-title">AIR QUALITY</h1>
+            <p class="info-data">AQI : <span id="aqi"></span></p>
+            <p class="info-data">CO : <span id="co"></span></p>
+            <p class="info-data">NO2 : <span id="no2"></span></p>
+            <p class="info-data">O3 : <span id="o3"></span></p>
+            <p class="info-data">PM2.5 : <span id="pm2"></span></p>
+            <p class="info-data">PM10 : <span id="pm10"></span></p>
+            <p class="info-data">SO2 : <span id="so2"></span></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
